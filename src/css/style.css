@@ -1,0 +1,17 @@
+body {
+	inline-size: 700px;
+	block-size: 100%;
+	border: 1px solid black;
+	margin: 0 auto;
+}
+
+.header {
+	border: 1px solid blue;
+}
+.heading-a,
+.heading-b,
+.heading-c {
+	display: block;
+	text-align: center;
+	border: 1px solid red;
+}
