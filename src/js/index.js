@@ -4,11 +4,9 @@ import "../css/style.css";
 import image from "../images/roman-matovsky-4NdNhu9HxbE-unsplash.jpg";
 
 const body = document.querySelector("body");
-const contentContainer = document.createElement("main");
-
-const header = document.createElement("header");
 
 function headerComponent() {
+	const header = document.createElement("header");
 	const mainHeading = document.createElement("h1");
 	header.classList.add("header");
 	mainHeading.classList.add("main-heading");
@@ -38,13 +36,21 @@ function makeButton(buttonContainer) {
 	const buttonText = ["Home", "Menu", "Contact"];
 	buttonText.forEach(label => {
 		const button = document.createElement("div");
+		button.classList.add(`${label}`);
 		button.classList.add("btn");
 		buttonContainer.appendChild(button);
 		button.innerHTML = `<p class="button-text">${label}</p>`;
 	});
 }
 
+function contentComponent() {
+	const contentContainer = document.createElement("main");
+	contentContainer.id = "Content";
+
+	return contentContainer;
+}
+
 body.append(headerComponent());
 body.append(imageComponent());
 body.append(buttonComponent());
-body.append(contentContainer);
+body.append(contentComponent());
