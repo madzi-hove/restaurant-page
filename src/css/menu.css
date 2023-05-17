@@ -1,0 +1,7 @@
+.menu-page {
+	display: flex;
+}
+
+.menu-page__item {
+	flex: 1;
+}
