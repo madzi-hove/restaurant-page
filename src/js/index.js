@@ -1,5 +1,8 @@
 // import statements
 import "../css/jwcomeau-reset.css";
+import "../css/home.css";
+import "../css/menu.css";
+import "../css/contact.css";
 import "../css/style.css";
 import image from "../images/roman-matovsky-4NdNhu9HxbE-unsplash.jpg";
 import { loadPage as homePage } from "./home";
@@ -61,7 +64,7 @@ class App {
 		this.body.append(this.imageComponent());
 		this.body.append(this.buttonComponent());
 		this.body.append(this.contentComponent());
-		homePage();
+		menuPage();
 	}
 }
 
