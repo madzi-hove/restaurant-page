@@ -13,6 +13,9 @@ class App {
 	body = document.querySelector("body");
 	constructor() {
 		this.displayPage();
+		document
+			.querySelector(".button-container")
+			.addEventListener("click", e => this.tabSwitch(e.target));
 	}
 
 	headerComponent() {
@@ -70,7 +73,7 @@ class App {
 		paragragh.classList.add("footer__text");
 		footer.appendChild(paragragh);
 
-		paragragh.innerHTML = `Project by <a href="${odinLink}">The Odin Project</a>, coded by <a href="${homePage}">Madzi Hove</a>`;
+		paragragh.innerHTML = `Project by <a class="link" target="_blank" title="Opens in new tab" href="${odinLink}">The Odin Project</a>, coded by <a class="link" target="_blank" title="Opens in new tab" href="${homePage}">Madzi Hove</a>`;
 
 		return footer;
 	}
@@ -83,6 +86,12 @@ class App {
 		this.body.append(this.footerComponent());
 		homePage();
 	}
+
+	tabSwitch = target => {
+		if (target.innerText === "Home") homePage();
+		if (target.innerText === "Menu") menuPage();
+		if (target.innerText === "Contact") contactPage();
+	};
 }
 
 const app = new App();
