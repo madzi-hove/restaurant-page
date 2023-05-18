@@ -59,12 +59,29 @@ class App {
 
 		return contentContainer;
 	}
+
+	footerComponent() {
+		const homePage = `https://github.com/madzi-hove`;
+		const odinLink = `https://www.theodinproject.com`;
+		const footer = document.createElement("footer");
+		const paragragh = document.createElement("p");
+
+		footer.classList.add("attribution");
+		paragragh.classList.add("footer__text");
+		footer.appendChild(paragragh);
+
+		paragragh.innerHTML = `Project by <a href="${odinLink}">The Odin Project</a>, coded by <a href="${homePage}">Madzi Hove</a>`;
+
+		return footer;
+	}
+
 	displayPage() {
 		this.body.append(this.headerComponent());
 		this.body.append(this.imageComponent());
 		this.body.append(this.buttonComponent());
 		this.body.append(this.contentComponent());
-		menuPage();
+		this.body.append(this.footerComponent());
+		homePage();
 	}
 }
 
