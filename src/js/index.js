@@ -48,11 +48,11 @@ class App {
 	makeButton(buttonContainer) {
 		const buttonText = ["Home", "Menu", "Contact"];
 		buttonText.forEach(label => {
-			const button = document.createElement("div");
+			const button = document.createElement("a");
 			button.classList.add(`${label}`);
 			button.classList.add("btn");
 			buttonContainer.appendChild(button);
-			button.innerHTML = `<p class="button-text">${label}</p>`;
+			button.innerText = `${label}`;
 		});
 	}
 
@@ -78,19 +78,47 @@ class App {
 		return footer;
 	}
 
+	activeTabOnLoad() {
+		const activeBtn = document.querySelector(".Home");
+		activeBtn.classList.add("active");
+		homePage();
+	}
+
 	displayPage() {
 		this.body.append(this.headerComponent());
 		this.body.append(this.imageComponent());
 		this.body.append(this.buttonComponent());
 		this.body.append(this.contentComponent());
 		this.body.append(this.footerComponent());
-		homePage();
+		this.activeTabOnLoad();
+	}
+
+	removeActiveClass() {
+		const btns = document.querySelectorAll(".btn");
+		btns.forEach(btn => {
+			if (btn.classList.contains("active")) {
+				btn.classList.remove("active");
+			}
+		});
 	}
 
 	tabSwitch = target => {
-		if (target.innerText === "Home") homePage();
-		if (target.innerText === "Menu") menuPage();
-		if (target.innerText === "Contact") contactPage();
+		console.log(target);
+		if (target.innerText === "Home") {
+			this.removeActiveClass();
+			target.classList.add("active");
+			homePage();
+		}
+		if (target.innerText === "Menu") {
+			this.removeActiveClass();
+			target.classList.add("active");
+			menuPage();
+		}
+		if (target.innerText === "Contact") {
+			this.removeActiveClass();
+			target.classList.add("active");
+			contactPage();
+		}
 	};
 }
 
