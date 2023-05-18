@@ -1,11 +1,20 @@
+:root {
+	--colour-btn: #5d9c59;
+	--colour-btn-active: #41644a;
+	--colour-text: #263a29;
+	--colour-background: #fee8b0;
+}
+
 body {
-	inline-size: 700px;
+	color: var(--colour-text);
+	inline-size: 43.75rem;
 	block-size: 100%;
+	background-color: var(--colour-background);
 	margin: 0 auto;
 }
 
 .header {
-	margin: 0 0 2rem;
+	margin: 2rem 0;
 }
 .heading-a,
 .heading-b,
@@ -15,17 +24,37 @@ body {
 	line-height: 1;
 }
 
+.heading-a,
+.heading-b {
+	font-size: 1.5rem;
+}
+
+.heading-c {
+	font-size: 2.5rem;
+}
+
 .img {
-	block-size: 500px;
+	block-size: 31.25rem;
 	inline-size: 100%;
 }
 
 .button-container {
 	display: flex;
-	border: 1px solid black;
+	margin: 2rem 0;
 }
 
 .btn {
 	flex: 1;
-	border: 1px solid blue;
+	text-align: center;
+	background-color: var(--colour-btn);
+	padding: 1rem 0;
+}
+
+.attribution {
+	text-align: center;
+	margin: 2rem 0 0;
+}
+
+.link {
+	text-decoration: none;
 }
