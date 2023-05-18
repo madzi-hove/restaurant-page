@@ -1,0 +1,4 @@
+.list__item li {
+	list-style: circle;
+	margin-left: 2rem;
+}
