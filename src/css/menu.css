@@ -2,6 +2,40 @@
 	display: flex;
 }
 
+.menu-page h2 {
+	font-size: 2rem;
+	text-transform: capitalize;
+}
+
+.menu-page h3 {
+	text-transform: capitalize;
+}
+
 .menu-page__item {
 	flex: 1;
+	padding: 1.5rem 0.5rem;
+	border: 1px solid black;
+}
+
+.menu__header {
+	display: flex;
+	justify-content: space-between;
+	line-height: 1.2;
+	padding: 0 0 0.5rem;
+	border-bottom: 5px solid var(--colour-text);
+	margin: 0 0 1rem;
+	gap: 1rem;
+}
+
+.eggs-and-more .menu__heading {
+	flex: 1 0 auto;
+}
+
+.menu__list li {
+	margin: 1rem 0;
+}
+
+.list__item div {
+	display: flex;
+	justify-content: space-between;
 }
