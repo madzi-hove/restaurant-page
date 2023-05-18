@@ -1,5 +1,6 @@
 :root {
 	--colour-btn: #5d9c59;
+	--colour-btn-hover: #617a55;
 	--colour-btn-active: #41644a;
 	--colour-text: #263a29;
 	--colour-background: #fee8b0;
@@ -48,6 +49,15 @@ body {
 	text-align: center;
 	background-color: var(--colour-btn);
 	padding: 1rem 0;
+}
+
+.btn:hover {
+	cursor: pointer;
+	background-color: var(--colour-btn-hover);
+}
+
+.active {
+	background-color: var(--colour-btn-active);
 }
 
 .attribution {
