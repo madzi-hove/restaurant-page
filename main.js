@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("const body = document.querySelector(\"body\");\nconst contentContainer = document.querySelector(\"#content\");\n\nconsole.log(body);\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
 
 /***/ })
 
