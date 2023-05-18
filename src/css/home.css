@@ -1,11 +1,11 @@
-li {
-	list-style: circle;
-}
-
 .home__list {
 	margin: 2rem 0 0;
 }
 
-.list__item {
+.home__list li {
+	list-style: circle;
+}
+
+.home__list .list__item {
 	margin-left: 1rem;
 }
